@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 import java.util.UUID;
 
 @Entity
-@Table(name = "department")
+@Table(name = "tb_department")
 @Data
 @NoArgsConstructor
 public class Department {

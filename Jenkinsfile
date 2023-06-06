@@ -6,6 +6,7 @@ pipeline {
     stages {
         stage("Build stage") {
             steps {
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'jenkins-token', url: 'https://github.com/guisofiati/sonarqube-jenkins-app']])
                 echo "cmd: mvn clean install -DskipTests"
                 sh "mvn clean install -DskipTests"
             }
